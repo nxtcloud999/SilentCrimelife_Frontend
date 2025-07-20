@@ -21,9 +21,15 @@ Dieses Frontend hat technisch gesehen viele "Funktionen", darunter:
 > **Schlecht** ist untertrieben.  
 > Die Struktur ist so wirr wie ein Traum nach 12 Energy-Drinks.  
 > Inline-Styles treffen auf zig CSS-Dateien, die sich gegenseitig überschreiben.  
-> IDs und Klassen? Eine Mischung aus deutsch, englisch, ALL CAPS und irgendwas mit „ffabody“ (was zur Hölle ist das?).  
-> JS-Logik liegt in Events versteckt oder in Kommentaren, weil selbst die Entwickler den Überblick verloren haben.  
-> Und natürlich gibt's keine Komponenten, keine Struktur, kein Routing – einfach ein riesiger UI-Brei.
+> IDs und Klassen? Eine Mischung aus deutsch, englisch, ALL CAPS.  
+> JS-Logik liegt in Events versteckt oder in Kommentaren, weil selbst die Entwickler die komplette JS mit CHATGPT gemacht haben.  
+> Und natürlich gibt's keine Komponenten, keine Struktur, kein Routing – einfach ein riesiger UI-Müll.
+
+## 🖼️ Vorschau
+
+<p align="left">
+  <img src="https://fraudcard.org/file/chrome_fG1VE7mVcP" alt="Vorschau" width="600"/>
+</p>
 
 ## 🛠️ Wie benutzt man den Scheiß?
 
@@ -31,6 +37,7 @@ Dieses Frontend hat technisch gesehen viele "Funktionen", darunter:
 2. Lass dich von 200 Panels erschlagen.
 3. Fang an zu weinen.
 4. Viel Glück beim Herausfinden, welches Panel warum angezeigt wird.
+5. Alle Fonts einstellen und erstmal diese Scheiße responsive machen, weil warum nicht alles in px schreiben 🚬
 
 ## 🎯 Fazit
 
