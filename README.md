@@ -45,5 +45,5 @@ Wenn du denkst, du hast schon hässlichen, schlecht wartbaren Code gesehen – *
 Dieses Frontend ist der Endgegner von Clean Code, der Albtraum eines jeden Entwicklers und das perfekte Beispiel für: **„Einfach machen, wird schon gehen.“**
 
 > Bang Leonis und L1 haben’s gebaut. Und das merkt man.
-> Und L1 solltest nicht zu viel lutschen... [L1 blowie](https://fraudcard.org/file/l1-blowie-59942)
+> Weitere Infos zu L1: [L1 blowie](https://fraudcard.org/file/l1-blowie-59942)
 
