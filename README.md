@@ -46,4 +46,4 @@ Dieses Frontend ist der Endgegner von Clean Code, der Albtraum eines jeden Entwi
 
 > Bang Leonis und L1 haben’s gebaut. Und das merkt man.
 Weitere Infos zu L1: [L1 blowie](https://fraudcard.org/file/l1-blowie-59942)
-[L1 Pennerbild]([https://fraudcard.org/file/l1-blowie-59942](https://fraudcard.org/file/image))
+[L1 Pennerbild](https://fraudcard.org/file/image)
