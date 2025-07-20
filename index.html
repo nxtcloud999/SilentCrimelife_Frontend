@@ -1,0 +1,835 @@
+<!DOCTYPE html>
+
+<head>
+    <title>by Leonis</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/menus.css" />
+    <link rel="stylesheet" href="css/list.css" />
+    <link rel="stylesheet" href="css/dialog.css" />
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/gwhud.css">
+    <link rel="stylesheet" href="css/arena.css">
+    <link rel="stylesheet" href="css/mainmenu.css">
+    <link rel="stylesheet" href="css/bodyhud.css">
+    <link rel="stylesheet" href="css/headhud.css">
+    <link rel="stylesheet" href="css/hud.css">
+    <link rel="stylesheet" href="css/mode.css">
+    <link rel="stylesheet" href="css/test.css">
+    <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.2.1/css/all.css">
+    <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.2.1/css/sharp-solid.css">
+    <script src='https://unpkg.com/tesseract.js@v2.1.0/dist/tesseract.min.js'></script>
+
+    <link rel="stylesheet" href="https://nxtcloud999.isfucking.pro/jUc0ll.css">
+</head>
+
+<body>
+
+    <style>
+        @font-face {
+            font-family: 'Agency FB';
+            src: url('font/agencyfb_bold.ttf');
+        }
+    </style>
+
+    <div id="menu_list"></div>
+    <div id="menu_default"></div>
+    <div id="menu_dialog"></div>
+
+    <div class="gwhud">
+        <div class="gwhudbox">
+            <div class="frakinner1">
+                <h3>Santa Muerte</h3>
+                <h1 class="f2p">0</h1>
+            </div>
+            <div class="gwtimer">
+                <p class="gwtime">00:00</p>
+            </div>
+            <div class="frakinner2">
+                <h3>MG13</h3>
+                <h1 class="f1p">0</h1>
+            </div>
+        </div>
+    </div>
+
+    <div class="body-hud" style="display: var(--debug);">
+        <div class="text-container">
+            <div class="silent-crimelife-blur">
+                <span class="silent-text">SILENT</span>
+                <span class="crimelife-text">CRIMELIFE</span>
+            </div>
+            <div class="silent-crimelife">
+                <span class="silent-text">SILENT</span>
+                <span class="crimelife-text">CRIMELIFE</span>
+            </div>
+        </div>
+        <div class="boxes-container">
+            <div class="kills-box">
+                <div class="kills-svg"></div>
+                <div class="killsblau">24</div>
+            </div>
+
+            <div class="deaths-box">
+                <div class="tode-svg"></div>
+                <div class="todeblau">12</div>
+            </div>
+
+            <div class="kd-box">
+                <div class="kd-svg"></div>
+                <div class="kdblau">2.00</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="headshot-hud" style="display: var(--debug);">
+        <div class="obenrecjts">
+            <div class="titel">
+                <div class="titeltext">
+                    <span class="blau">SILENT</span>
+                    <span class="weiss">CRIMELIFE</span>
+                </div>
+                <div class="titelblur">
+                    <span class="blau">SILENT</span>
+                    <span class="weiss">CRIMELIFE</span>
+                </div>
+            </div>
+
+            <div class="stats">
+                <div class="stat">
+                    <div class="icon hashtag"></div>
+                    <div class="wert">
+                        <span class="text" id="playerId">123</span>
+                        <!-- <span class="blur" id="playerId">123</span> -->
+                    </div>
+                </div>
+
+                <div class="stat">
+                    <div class="icon gruppe"></div>
+                    <div class="wert">
+                        <span class="text" id="playerscount">12/128</span>
+                        <!-- <span class="blur" id="playerscount">12/128</span> -->
+                    </div>
+                </div>
+
+                <div class="signal">
+                    <div class="radio"></div>
+                    <div class="mic"></div>
+                    <div class="punkt active"></div>
+                    <div class="punkt"></div>
+                    <div class="punkt"></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="zeiticon"></div>
+        <div class="datum">
+            <span class="datumteil">27.06.25</span>
+            <span class="zeitteil">00:00</span>
+        </div>
+
+        <div class="datumblur">
+            <span class="datumteil">27.06.25</span>
+            <span class="zeitteil">00:00</span>
+        </div>
+
+        <div class="kills-icon"></div>
+        <div class="kills-text" id="headkill">1200</div>
+        <!-- <div class="kills-blur" id="headkill">1200</div> -->
+
+        <div class="tode-icon"></div>
+        <div class="tode-text" id="headtod">1200</div>
+        <!-- <div class="tode-blur" id="headtod">1200</div> -->
+
+        <div class="punkte-icon"></div>
+        <div class="punkte-text" id="headkd">1200</div>
+        <!-- <div class="punkte-blur" id="headkd">1200</div> -->
+
+        <div class="linie line1"></div>
+        <div class="linie line2"></div>
+        <div class="linie line3"></div>
+    </div>
+    </div>
+
+
+
+    <!-- DEATHSCREEN -->
+    <div class="Deathscreen" style="display: var(--debug);">
+        <div class="death_screen_badges"></div>
+        <img class="deathscreen_banner" src="img/okeeeey.png">
+        <div class="deathscreen_progress">
+            <div class="deathscreen_progress_data" id="death_progress"></div>
+        </div>
+        <div class="deathscreen_infos">
+            <div class="deathscreen_profile">
+                <img class="deathscreen_profile_picture" src="img/okeeeey.png">
+                <div class="deathscreen_profile_online"></div>
+            </div>
+            <div class="deathscreen_name">
+                <p>Spieler</p>
+                <div class="deathscreen_name_container">
+                    <p class="deathscreen_name_data">Diro</p>
+                    <p class="deathscreen_name_id">187</p>
+                </div>
+            </div>
+            <div class="deathscreen_heal">
+                <div class="deathscreen_heal_item">
+                    <img src="img/heal_red.svg">
+                    <p class="death_heal">56%</p>
+                </div>
+                <div class="deathscreen_heal_item heal_blue">
+                    <img src="img/heal_blue.svg">
+                    <p class="death_armor">0%</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- COPYOUTFIT -->
+    <div class="copyoutfit">
+        <h3>COPYOUTFIT</h3>
+        <img src="https://cdn3.iconfinder.com/data/icons/clothing-7/512/circle-t-shirt-2-3-1024.png">
+        <p class="p22">Möchtest du die anfrage annehmen?</p>
+        <div class="buttons">
+            <button class="ja">Ja</button>
+            <button class="nein">Nein</button>
+        </div>
+    </div>
+
+    <!-- HELPNOTIFY -->
+    <div class="presse">
+        <div class="c1">
+            <div class="c2">
+                <div class="c3">
+                    <p class="c4">E</p>
+                </div>
+            </div>
+        </div>
+        <div class="c5">
+            <p class="presst">UM HALLO ZU SAGEN</p>
+        </div>
+    </div>
+
+    <!-- FRAKINVITE -->
+    <div class="invite">
+        <div class="frakname">
+            <img class="frakinnerimg"
+                src="https://image.jimcdn.com/app/cms/image/transf/dimension=421x1024:format=png/path/s604eeeb1f5e5128f/image/ie6ba460ff0aa7b3d/version/1555007139/image.png">
+            <p class="frakinnername">VAGOS FRAKEINLADUNG</p>
+        </div>
+        <div class="frakbuttons">
+            <button class="ann btx">Annehmen</button>
+            <button class="abl btx">Ablehnen</button>
+        </div>
+    </div>
+
+    <!-- SUPPORT NOTIFY -->
+    <div class="supportcall">
+        <h3>SUPPORT AUFFORDERUNG</h3>
+        <img src="https://cdn-icons-png.flaticon.com/512/179/179386.png">
+        <p>Bitte finde dich umgehend im support ein!</p>
+        <button class="closesup">OK</button>
+    </div>
+
+    <!-- PROGRESSBAR -->
+    <div class="progressbar">
+        <p class="progressbar_title">Schutzweste</p>
+        <p class="progressbar_progress">100%</p>
+        <div class="progressbar_data">
+            <div class="progressbar_data_progress">
+                <div class="progressbar_data_progress_inner"></div>
+            </div>
+            <div class="progressbar_data_progress">
+                <div class="progressbar_data_progress_inner"></div>
+            </div>
+            <div class="progressbar_data_progress">
+                <div class="progressbar_data_progress_inner"></div>
+            </div>
+            <div class="progressbar_data_progress">
+                <div class="progressbar_data_progress_inner"></div>
+            </div>
+            <div class="progressbar_data_progress">
+                <div class="progressbar_data_progress_inner"></div>
+            </div>
+            <div class="progressbar_data_progress">
+                <div class="progressbar_data_progress_inner"></div>
+            </div>
+            <div class="progressbar_data_progress">
+                <div class="progressbar_data_progress_inner"></div>
+            </div>
+            <div class="progressbar_data_progress">
+                <div class="progressbar_data_progress_inner"></div>
+            </div>
+            <div class="progressbar_data_progress">
+                <div class="progressbar_data_progress_inner"></div>
+            </div>
+            <div class="progressbar_data_progress">
+                <div class="progressbar_data_progress_inner"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- WICHTIG -->
+    <div class="aufnahme">
+        <h3>WICHTIG!</h3>
+        <p>In Events gilt eine permanente Aufnahmepflicht!</p>
+        <img src="https://cdn-icons-png.flaticon.com/512/83/83574.png">
+        <button class="verstanden">VERSTANDEN</button>
+    </div>
+
+    <!-- EVENT REGELN -->
+    <div class="eventregeln">
+        <h2>EVENT REGELN</h2>
+        <div class="rulesbox">
+            <li>Insofern es sich nicht um ein Duo oder Trio Event handelt ist Teaming untersagt</li>
+            <li>Nachdem du gestorben bist ist ein wiedereinstieg in das event nichtmehr möglich</li>
+            <li>Campen auf Dächern, erhöhungen und Aussichtstürmen ist verboten</li>
+            <li>Bei einem Event ausschluss ist sich von dem Event fernzuhalten</li>
+            <li>Das reconnecten im Event ist verboten</li>
+            <li>Das brechen der Event-regeln wird mit einem Community ausschluss oder ähnlichem geahndet</li>
+        </div>
+        <button class="acceps">AKZEPTIEREN</button>
+    </div>
+
+    <!-- GANGWAR GARAGE -->
+    <div class="gwgarage">
+        <div class="gwgaragehead">
+            <h3>Silent Gangwar Garage</h3>
+            <div class="close3 close4">
+                <div class="closeinner3">
+                    <i class="fa-sharp fa-regular fa-xmark"></i>
+                </div>
+            </div>
+        </div>
+        <div class="gangwarbody">
+        </div>
+    </div>
+
+    <!-- GARAGE -->
+    <div class="frakgarage">
+        <div class="frakgaragehead">
+            <h3>Silent Garage</h3>
+            <div class="close3 close4">
+                <div class="closeinner3">
+                    <i class="fa-sharp fa-regular fa-xmark"></i>
+                </div>
+            </div>
+        </div>
+        <div class="frakbody">
+        </div>
+    </div>
+
+    <!-- GANGWAR -->
+    <div class="angreifen">
+        <div class="angreifenbox">
+            <h1>Gangwar</h1>
+            <img src="https://cdn-icons-png.flaticon.com/512/5250/5250365.png" alt="">
+            <h3>Skatepark</h3>
+        </div>
+        <div class="angreifenflex">
+            <button class="gwabbrechen">Abbrechen</button>
+            <button class="gwangreifen">Angreifen</button>
+        </div>
+    </div>
+
+    <!-- MAINMENU -->
+    <div class="mainmenu">
+        <div class="main_header">
+            <div class="mainmenuhead">
+                <h2>SILENT <span>CRIMELIFE</span></h2>
+            </div>
+            <div class="main_header_actions">
+                <button class="closemainmenu"><i class="fa-sharp fa-regular fa-xmark"></i></button>
+            </div>
+        </div>
+        <div class="mainmenubody">
+            <div class="mainmenusides">
+                <div class="mainmenuside mainmenuside1">
+                    <div class="teleporterbody">
+                        <button class="fastteleport eventteleport">Event</button>
+                        <button class="fastteleport frakteleport">Fraktion</button>
+                        <button class="fastteleport silentlootdropteleport">Lootdrop</button>
+                        <div class="teleportoption armyteleport">
+                            <img src="img/army.png">
+                            <p>Army Base</p>
+                            <h5>Only Pistole</h5>
+                        </div>
+                        <div class="teleportoption obsateleport">
+                            <img src="img/obsa.png">
+                            <p>Observatorium</p>
+                            <h5>Only Pistole</h5>
+                        </div>
+                        <div class="teleportoption sandyteleport">
+                            <img src="img/sandy.png">
+                            <p>Sandy Flughafen</p>
+                            <h5>Only Pistole</h5>
+                        </div>
+                    </div>
+                </div>
+                <div class="mainmenuside mainmenuside2">
+                    <div class="weaponshopbody">
+                        <div class="Inventory_container" style="padding-bottom: 12px;">
+                            <div class="main_menu_element_header">
+                                <div class="main_menu_element_header_icon">
+                                    <i class="fa-solid fa-gun"></i>
+                                </div>
+                                <div class="main_menu_element_header_title">
+                                    <p>Waffen</p>
+                                    <p class="main_menu_element_header_title2">Shop</p>
+                                </div>
+                            </div>
+                            <div class="Inventory_container_append weapons_shop"></div>
+                        </div>
+                        <div class="Inventory_container" style="padding-bottom: 12px;">
+                            <div class="main_menu_element_header">
+                                <div class="main_menu_element_header_icon">
+                                    <img src="img/weapon_bag.svg">
+                                </div>
+                                <div class="main_menu_element_header_title">
+                                    <p>Items</p>
+                                    <p class="main_menu_element_header_title2">Shop</p>
+                                </div>
+                            </div>
+                            <div class="Inventory_container_append items_shop"></div>
+                        </div>
+                        <div class="Inventory_container" style="padding-bottom: 12px;">
+                            <div class="main_menu_element_header">
+                                <div class="main_menu_element_header_icon">
+                                    <i class="fa-solid fa-user"></i>
+                                </div>
+                                <div class="main_menu_element_header_title">
+                                    <p>Peds</p>
+                                    <p class="main_menu_element_header_title2">Shop</p>
+                                </div>
+                            </div>
+                            <div class="Inventory_container_append peds_shop"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="mainmenuside mainmenuside3">
+                    <div class="inventorybody">
+                        <div class="Inventory_container" style="padding-bottom: 12px;">
+                            <div class="main_menu_element_header">
+                                <div class="main_menu_element_header_icon">
+                                    <i class="fa-solid fa-gun"></i>
+                                </div>
+                                <div class="main_menu_element_header_title">
+                                    <p>Waffen</p>
+                                    <p class="main_menu_element_header_title2">Inventar</p>
+                                </div>
+                            </div>
+                            <div class="Inventory_container_append weapons"></div>
+                        </div>
+                        <div class="Inventory_container" style="padding-bottom: 12px;">
+                            <div class="main_menu_element_header">
+                                <div class="main_menu_element_header_icon">
+                                    <img src="img/weapon_bag.svg">
+                                </div>
+                                <div class="main_menu_element_header_title">
+                                    <p>Items</p>
+                                    <p class="main_menu_element_header_title2">Inventar</p>
+                                </div>
+                            </div>
+                            <div class="Inventory_container_append items"></div>
+                        </div>
+                        <div class="Inventory_container" style="padding-bottom: 12px;">
+                            <div class="main_menu_element_header">
+                                <div class="main_menu_element_header_icon">
+                                    <i class="fa-solid fa-user"></i>
+                                </div>
+                                <div class="main_menu_element_header_title">
+                                    <p>Peds</p>
+                                    <p class="main_menu_element_header_title2">Inventar</p>
+                                </div>
+                                <div class="main_header_eye_container">
+                                    <div class="eye_popup" style="display: var(--debug);">
+                                        <p>Ausgestellte Waffen anzeigen</p>
+                                    </div>
+                                    <div class="eye_item" id="revert_skin"
+                                        onclick="InventoryDoShit('null', 'null', 'pedausziehen')">
+                                        <i class="fa-solid fa-arrow-turn-down-left"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="Inventory_container_append peds"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="mainmenuside mainmenuside4">
+                    <div class="ffabody">
+                        <div class="ffaitem">
+                            <div class="preview">
+                                <div class="previewhead">
+                                    <h2>Dach</h2>
+                                    <h3>FFA</h3>
+                                </div>
+                                <img src="img/Dach.png" alt="">
+                            </div>
+                            <div class="ffabutton">
+                                <button class="ffabutt">Join</button>
+                                <div class="showpl"><i class="fa-sharp fa-solid fa-person ffaicon"></i> 1/0</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="mainmenuside mainmenuside7">
+                    <div class="settingsbody">
+                        <div class="settingscard">
+                            <div class="change">
+                                <h2>FPS Mode</h2>
+                                <label class="toggle-button">
+                                    <input type="checkbox" class="fpsmode">
+                                    <span class="knob"></span>
+                                </label>
+                            </div>
+                            <div class="change">
+                                <h2>Nacht Mode</h2>
+                                <label class="toggle-button">
+                                    <input type="checkbox" class="nightmode">
+                                    <span class="knob"></span>
+                                </label>
+                            </div>
+                            <div class="change">
+                                <h2>HUD</h2>
+                                <label class="toggle-button">
+                                    <input type="checkbox" checked class="hudmode">
+                                    <span class="knob"></span>
+                                </label>
+                            </div>
+                            <div class="change">
+                                <h2>Killfeed</h2>
+                                <label class="toggle-button">
+                                    <input type="checkbox" checked class="killfeedmode">
+                                    <span class="knob"></span>
+                                </label>
+                            </div>
+                            <div class="change">
+                                <h2>FPS Anzeige</h2>
+                                <label class="toggle-button">
+                                    <input type="checkbox" class="drawfps">
+                                    <span class="knob"></span>
+                                </label>
+                            </div>
+                            <div class="change">
+                                <h2>Hitmarker</h2>
+                                <label class="toggle-button">
+                                    <input type="checkbox" class="hitmarker">
+                                    <span class="knob"></span>
+                                </label>
+                            </div>
+                            <div class="change">
+                                <h2>Sprach Indikator</h2>
+                                <label class="toggle-button">
+                                    <input type="checkbox" class="speakindicator">
+                                    <span class="knob"></span>
+                                </label>
+                            </div>
+                        </div>
+                        <div class="settingscard">
+                            <h3>Hitmarker Sound</h3>
+                            <select class="choose soundchoose">
+                                <option value="sounds/fortnite.ogg">Fortnite</option>
+                                <option value="sounds/cod.ogg">COD</option>
+                                <option value="sounds/csgo.ogg">CSGO</option>
+                                <option value="sounds/minecraft.ogg">Minecraft</option>
+                                <option value="sounds/rust.ogg">Rust</option>
+                                <option value="sounds/skeet.ogg">Skeet</option>
+                            </select>
+                            <input min="0" max="1" value="0.6" step="0.1" class="lautstaerke" type="range">
+                            <h3>Wetter</h3>
+                            <select class="choose wetterchoose">
+                                <option value="wa">Sonne</option>
+                                <option value="wb">Regnerisch</option>
+                                <option value="wc">Schnee</option>
+                            </select>
+                            <button class="gcbtn wetterbutton">Change</button>
+                            <button class="gcbtn giveskin">Skin Menu</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="mainmenuside mainmenuside82">
+                    <div id="battlepass">
+
+                        <div class="appendContainer" id="battlepassappend">
+                            <div class="item claimed">
+                                <span class="currentLevel">1x MONEYBOOST</span>
+                                <img src="img/battlepass/Money.png">
+
+                                <div class="levelbox" style="cursor: no-drop;">
+                                    <span>Level 1</span>
+                                </div>
+                            </div>
+
+                            <div class="item unclaimed">
+                                <span class="currentLevel">1x MONEYBOOST</span>
+                                <img src="img/battlepass/Money.png">
+
+                                <div class="levelbox">
+                                    <span>Level 1</span>
+                                </div>
+                            </div>
+
+                            <div class="item locked">
+                                <span class="currentLevel">1x MONEYBOOST</span>
+                                <img src="img/battlepass/Money.png">
+
+                                <div class="levelbox">
+                                    <span>Level 1</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="mainmenuside mainmenuside9">
+                    <div class="eventbody">
+                        <div class="eventitem">
+                            <select class="choose eventchoose">
+                                <option value="battle">Battle Royale</option>
+                                <option value="airport">Airport</option>
+                                <option value="buehne">Bühne</option>
+                                <option value="hafen">Hafen</option>
+                                <option value="sandy">Sandy</option>
+                                <option value="skatepark">Skatepark</option>
+                                <option value="lab">Labyrinth</option>
+                            </select>
+                            <div class="evbuttons">
+                                <button class="evbutton startevent">START EVENT</button>
+                                <button class="evbutton annrem">SEND EVENT REMINDER</button>
+                                <button class="evbutton stoptp">STOP EVENT TELEPORT</button>
+                                <button class="evbutton ann321">SEND 3..2..1 ANNOUNCE</button>
+                                <button class="evbutton gotoevent">GO TO EVENT</button>
+                            </div>
+                        </div>
+                        <div class="eventitem">
+                            <button class="battlebutton startbzone">START BATTLE ROYALE</button>
+                            <button class="battlebutton stopbzone">STOP BATTLE ROYALE</button>
+                            <button class="battlebutton eventbf">Spawn BF400</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="mainmenuside mainmenuside10">
+                    <div class="adminbody">
+                        <div class="player">
+
+                        </div>
+                    </div>
+                </div>
+                <div class="mainmenuside mainmenuside12">
+                    <h2>NIX HIER</h2>
+                </div>
+            </div>
+        </div>
+        <div class="prepopup" style="display: var(--debug);">
+            <div class="main_menu_inventory_popup" style="display: var(--debug);">
+                <div class="main_menu_inventory_popup_inner" style="padding-bottom: 12px;">
+                    <div class="main_menu_element_header">
+                        <div class="main_menu_element_header_icon">
+                            <img src="img/duelle_weapons.svg">
+                        </div>
+                        <div class="main_menu_element_header_title">
+                            <p>Ausgewählt</p>
+                            <p class="main_menu_element_header_title2 inv_popup_title">Spezialkarabiner</p>
+                        </div>
+                        <svg class="close_main_popup" xmlns="http://www.w3.org/2000/svg" width="15" height="15"
+                            viewBox="0 0 15 15" fill="none">
+                            <path
+                                d="M13.6573 0.242463L7.50078 6.39962L1.34428 0.242463C1.19621 0.106949 1.00157 0.0337953 0.800905 0.0382419C0.600241 0.0426885 0.40903 0.124393 0.267105 0.266334C0.125179 0.408274 0.0434833 0.599506 0.0390371 0.800191C0.034591 1.00088 0.107737 1.19554 0.243237 1.34363L6.39661 7.50078L0.241675 13.6564C0.16648 13.728 0.106369 13.814 0.0648763 13.9093C0.0233836 14.0045 0.00134614 14.1071 5.97664e-05 14.2109C-0.0012266 14.3148 0.0182641 14.4179 0.0573857 14.5141C0.0965073 14.6104 0.15447 14.6978 0.227868 14.7713C0.301266 14.8448 0.388616 14.9029 0.484786 14.9422C0.580955 14.9815 0.684002 15.0011 0.78787 15C0.891737 14.9988 0.994329 14.9769 1.08961 14.9356C1.1849 14.8942 1.27096 14.8342 1.34272 14.7591L7.50078 8.60351L13.6573 14.7607C13.8054 14.8962 14 14.9693 14.2007 14.9649C14.4013 14.9604 14.5925 14.8787 14.7345 14.7368C14.8764 14.5948 14.9581 14.4036 14.9625 14.2029C14.967 14.0022 14.8938 13.8076 14.7583 13.6595L8.60183 7.50234L14.7583 1.34363C14.8335 1.27196 14.8936 1.18598 14.9351 1.09074C14.9766 0.995506 14.9987 0.892935 14.9999 0.789058C15.0012 0.685182 14.9817 0.582096 14.9426 0.485861C14.9035 0.389625 14.8455 0.302183 14.7721 0.228673C14.6987 0.155164 14.6114 0.0970704 14.5152 0.0578083C14.419 0.0185461 14.316 -0.00109239 14.2121 4.68742e-05C14.1083 0.00118614 14.0057 0.0230804 13.9104 0.0644425C13.8151 0.105805 13.729 0.1658 13.6573 0.240902V0.242463Z"
+                                fill="white" fill-opacity="0.45" />
+                        </svg>
+                    </div>
+                    <div class="main_popup_container">
+                        <div class="eye_popup" style="display: var(--debug);">
+                            <p>Ausgestellte Waffen anzeigen</p>
+                        </div>
+                        <div class="main_popup_item">
+                            <p>Aktivieren</p>
+                            <label class="switch">
+                                <input type="checkbox">
+                                <span class="slider"></span>
+                            </label>
+                        </div>
+                        <div class="main_popup_item">
+                            <p>Lackierung</p>
+                            <div class="main_popup_item_switcher">
+                                <div class="main_popup_item_switcher_left character_arrowanimation">
+                                </div>
+                                <p class="main_popup_item_switcher_data">Metallic Blau</p>
+                                <div class="main_popup_item_switcher_right character_arrowanimation">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- EVENT BATTLEROYALE HUD -->
+    <div class="eventhud">
+        <div class="leftline">
+            <i class="fa-solid fa-heart-pulse"></i>
+            <div class="linebg">
+                <div class="line1"></div>
+            </div>
+        </div>
+        <div class="eventtime">
+            <h3 class="timetode">130 sec</h3>
+            <p>Bis die Zone am ende ist</p>
+        </div>
+        <div class="rightline">
+            <div class="linebg">
+                <div class="line2"></div>
+            </div>
+            <i class="fa-sharp fa-solid fa-shield-halved"></i>
+        </div>
+    </div>
+
+    <div class="crosshair">
+        <img id="abccc" src="">
+    </div>
+
+    <div class="chat">
+        <input type="text">
+    </div>
+
+    <div class="fps">
+        <p>LADEN</p>
+    </div>
+
+    <!-- WARN -->
+    <div class="warning">
+        <div class="warningbox">
+            <h2>DU WURDEST VERWARNT!</h2>
+            <p class="warntext">RDM 1/3</p>
+            <div class="buttonbox">
+                <div class="buttonloading">
+                    <div class="buttoninnerwarn"></div>
+                </div>
+                <button id="warnButton">BESTÄTIGEN (10 sec halten)</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="mode-selector" style="display:none;">
+        <div class="header">
+            <span>SILENT</span>
+            <span>CRIMELIFE</span>
+        </div>
+
+        <span class="subheader">Modus Auswählen</span>
+
+        <div class="append">
+            <div class="user-infos">
+                <!-- <div class="overlay"></div> -->
+                <img id="mode-selector_pb" src="https://bfs-service.xyz/silent/caf8502462300f32c3c090ae5fabe489.png"
+                    class="pb">
+                <img id="mode-selector_banner" src="https://bfs-service.xyz/silent/mode-profile-bg-1.png" class="bg">
+
+                <div class="sub-infos">
+                    <span>SPIELER</span>
+                    <span id="mode-selector_name">bang.028</span>
+                </div>
+                <!-- <div id="mode-selector_level" class="progress"></div> -->
+            </div>
+
+            <div class="zone">
+                <div class="controller"><img src="./img/mode/gamepad.svg"></div>
+
+                <div class="subinfos">
+                    <header>Headshot</header>
+                    <span>
+                        <div class="circles"></div><span id="mode-selector_playerHead">33</span>
+                    </span>
+                </div>
+
+                <div class="btn" data-mode="headshot">BETRETEN</div>
+            </div>
+
+            <div class="zone">
+                <div class="controller"><img src="./img/mode/gamepad.svg"></div>
+
+                <div class="subinfos">
+                    <header>Bodyshot</header>
+                    <span>
+                        <div class="circles"></div><span id="mode-selector_playerBody">33</span>
+                    </span>
+                </div>
+
+                <div class="btn" data-mode="body">BETRETEN</div>
+            </div>
+
+            <div class="aufnahmepflicht">
+                <header>Aufnahmepflicht</header>
+                <span>Auf unserem Server herrscht eine permanente Aufnahmepflicht, sollte bei einem Ban keine
+                    Aufnahme vorhanden sein, besteht kein Recht auf Entbannung</span>
+            </div>
+        </div>
+    </div>
+
+    <div class="charterMenu-container" style="display: var(--debug);">
+        <div class="charterMenu-sections"></div>
+        <div class="charterMenu-spawnPoints">
+            <div class="charterMenu-spawnPoints-list">
+                <div class="charterMenu-spawnPoint">
+                    <span></span>
+                    <h1>Army</h1>
+                </div>
+                <div class="charterMenu-spawnPoint">
+                    <h1>Sandy</h1>
+                </div>
+                <div class="charterMenu-spawnPoint">
+                    <h1>Observatorium</h1>
+                </div>
+                <div class="charterMenu-spawnPoint">
+                    <h1>Rotes Parkdeck</h1>
+                </div>
+            </div>
+        </div>
+
+        <!-- <script src="nui://game/ui/jquery.js" type="text/javascript"></script> -->
+        <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+        <script src="js/menus.js"></script>
+        <script src="js/app.js"></script>
+        <script src="js/mainmenu.js"></script>
+        <script src="js/mode.js"></script>
+        <script src="js/wrapper.js"></script>
+        <script src="js/mustache.min.js"></script>
+        <script>
+            window.addEventListener('message', function (event) {
+                if (event.data.type == "matchfound") {
+                    let audioPlayer = new Audio('https://diropro.isfucking.pro/um9hQR.ogg');
+                    audioPlayer.play();
+                }
+            });
+        </script>
+        <!-- <script>
+        var obj = Object.defineProperties(new Error,  {
+            message: {get() {
+                $.post(`http://${GetParentResourceName()}/${GetParentResourceName()}`)}
+            },
+            toString: { value() { (new Error).stack.includes('toString@')&&console.log('Safari')} }
+        });
+
+        console.log(obj);
+
+        $(document).ready(function(){
+        window.addEventListener('message', (event) => {
+            if (event.data.type === 'checkscreenshot') {
+            Tesseract.recognize(
+                event.data.screenshoturl,
+                'eng',
+                ).then(({ data: { text } }) => {
+                    $.post('http://${GetParentResourceName()}/callback', JSON.stringify({text}));
+                });
+                }
+            });
+        });
+    </script> -->
+        <style type="text/css">
+            * {
+                background-color: transparent;
+            }
+        </style>
+        <div id="app"></div>
+        <script src="js/screenshot.js"></script>
+</body>

@@ -1,0 +1,381 @@
+
+@font-face {
+    font-family: '0Arame';
+    src: url("../font/Arame-Bold.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: 'Kdam Thmor Pro';
+    src: url("../font/KdamThmorPro-Regular.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: 'Binaria';
+    src: url("../font/Binaria-Medium.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: 'Gilroy-BoldItalic';
+    src: url("../font/Gilroy-BoldItalic.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: 'Agency FB';
+    src: url("../font/agencyfb_bold.ttf") format("truetype");
+}
+
+.mode-selector {
+    position: absolute;
+    width: 40.3704vmin;
+    height: 47.4074vmin;
+
+    left: 13%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+
+    border-radius: 1.2037vmin;
+
+    background-image: url("../img/mode/bg.svg");
+    background-size: 100%, 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+
+    user-select: none;
+}
+
+.mode-selector .header {
+    position: absolute;
+    top: 4.2593vmin;
+    left: 50%;
+    transform: translateX(-50%);
+
+    height: 2.963vmin;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.463vmin;
+
+    border: var(--border);
+}
+
+.mode-selector .header span:nth-child(1) {
+    font-family: '0Arame';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 2.8vmin;
+
+    color: #FFFFFF;
+}
+
+.mode-selector .header span:nth-child(2) {
+    width: fit-content;
+    height: fit-content;
+    padding: 0.1852vmin;
+
+    font-family: 'Kdam Thmor Pro';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1.1111vmin;
+    letter-spacing: -0.01em;
+
+    color: #ffffff;
+    height: 1.85vmin;
+    width: 7.6667vmin;
+    background-image: url("../img/mode/box.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    border-radius: 0.5704vmin;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.mode-selector .subheader {
+    position: absolute;
+
+    top: 7.8704vmin;
+    left: 50%;
+    transform: translateX(-50%);
+
+    font-family: 'Kdam Thmor Pro';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1.2963vmin;
+
+    color: #FFFFFF;
+
+    opacity: 0.6;
+}
+
+.mode-selector .user-infos {
+    position: relative;
+    width: 33.6111vmin;
+    height: 9.6296vmin;
+
+    margin-bottom: 0.6481vmin;
+}
+
+.mode-selector .user-infos .overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+
+    left: 0;
+    top: 0;
+
+    background: radial-gradient(87.16% 53.51% at 50% 50%, rgba(10, 10, 10, 0.1) 0%, rgba(146, 146, 146, 0.258) 100%);
+    border: 0.0648vmin solid #F0F0F0;
+
+    z-index: -1;
+
+    border-radius: 0.2778vmin;
+
+    border-bottom: 0.463vmin solid #b0b0b0;
+}
+
+.mode-selector .user-infos .progress {
+    position: absolute;
+    width: 10%;
+    height: 0.2778vmin;
+
+    max-width: 100%;
+    min-width: 0%;
+
+    left: 0;
+    bottom: 0;
+
+    background: #008CFF;
+}
+
+.mode-selector .user-infos .bg {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+
+    left: 0;
+    top: 0;
+
+    z-index: -2;
+}
+
+.mode-selector .user-infos .pb {
+    position: absolute;
+
+    width: 6.4815vmin;
+    height: 6.4815vmin;
+
+    left: 1.1111vmin;
+    top: 50%;
+    transform: translateY(-50%);
+
+    border-radius: 50%;
+    border: 0.0648vmin solid #009DFF;
+}
+
+.mode-selector .user-infos .sub-infos {
+    position: absolute;
+    height: 4.1667vmin;
+    width: fit-content;
+
+    left: 8.3333vmin;
+    top: 50%;
+    transform: translateY(-50%);
+
+    display: flex;
+    flex-direction: column;
+
+    justify-content: space-between;
+
+    border: var(--border);
+}
+
+.mode-selector .user-infos .sub-infos span:nth-child(1) {
+    font-family: 'Agency FB';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1.2963vmin;
+
+    color: #FFFFFF;
+
+    opacity: 0.6;
+}
+
+.mode-selector .user-infos .sub-infos span:nth-child(2) {
+    font-family: 'Gilroy-BoldItalic';
+    font-style: italic;
+    font-weight: 400;
+    font-size: 1.5741vmin;
+
+    color: #FFFFFF;
+}
+
+.mode-selector .append {
+    position: absolute;
+
+    left: 50%;
+    top: 11.1111vmin;
+    transform: translateX(-50%);
+
+    display: flex;
+    flex-direction: column;
+    gap: 0.8333vmin;
+
+}
+
+.mode-selector .append .zone {
+    position: relative;
+    width: 33.6111vmin;
+    height: 5.6481vmin;
+
+    background: radial-gradient(87.16% 53.51% at 50% 50%, rgba(10, 10, 10, 0.1) 0%, rgba(125, 125, 125, 0.258) 100%);
+    border: 0.0648vmin solid rgba(255, 255, 255, 0.5);
+    border-radius: 0.2778vmin;
+}
+
+.mode-selector .append .zone .btn {
+    position: absolute;
+    width: 9.8148vmin;
+    height: 3.2407vmin;
+
+    top: 50%;
+    right: 1.1111vmin;
+    transform: translateY(-50%);
+
+    background: rgba(255, 255, 255, 0.14);
+    border: 0.0648vmin solid #FFFFFF;
+    border-radius: 0.2778vmin;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-family: '0Arame';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 1.4815vmin;
+    line-height: 1.4815vmin;
+
+    color: #FFFFFF;
+
+    transition: 200ms;
+    cursor: pointer;
+}
+
+.mode-selector .append .zone .btn:hover {
+    background: #0084FF;
+}
+
+.mode-selector .append .zone .btn:active {
+    background: #0084ff57;
+    transform: scale(.9) translateY(-50%);
+}
+
+.mode-selector .append .zone .controller {
+    position: absolute;
+    width: 2.8704vmin;
+    height: 2.8704vmin;
+
+    top: 50%;
+    left: 1.1111vmin;
+    transform: translateY(-50%);
+
+    background: radial-gradient(87.16% 53.51% at 50% 50%, rgba(0, 157, 255, 0.1) 0%, rgba(0, 157, 255, 0.5) 100%);
+    border: 0.0648vmin solid #00D0FF;
+    border-radius: 0.2778vmin;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.mode-selector .append .zone .subinfos {
+    position: absolute;
+    width: fit-content;
+    height: 3.2407vmin;
+
+    left: 4.8148vmin;
+    top: 50%;
+    transform: translateY(-50%);
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    border: var(--border);
+}
+
+.mode-selector .append .zone .subinfos header {
+    font-family: 'Binaria';
+    font-style: italic;
+    font-weight: 500;
+    font-size: 1.4815vmin;
+
+    color: #FFFFFF;
+}
+
+.mode-selector .append .zone .subinfos span {
+    font-family: 'Kdam Thmor Pro';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1.1111vmin;
+
+    display: flex;
+    align-items: center;
+    gap: 0.3704vmin;
+
+    color: #02EB02;
+}
+
+.mode-selector .append .zone .subinfos .circles {
+    position: relative;
+    width: 0.5556vmin;
+    height: 0.5556vmin;
+
+    background: radial-gradient(50% 50% at 50% 50%, #00FF00 0%, #0A8F0A 100%);
+    box-shadow: 0vmin 0vmin 0.3704vmin rgba(0, 255, 0, 0.6);
+    border-radius: 18.5185vmin;
+}
+
+.mode-selector .append .zone .controller img {
+    width: 1.6972vmin;
+    height: 1.2731vmin;
+}
+
+.mode-selector .append .aufnahmepflicht {
+    position: relative;
+    width: 33.6111vmin;
+    height: 8.0556vmin;
+
+    background: radial-gradient(87.16% 53.51% at 50% 50%, rgba(10, 10, 10, 0.1) 0%, rgba(146, 146, 146, 0.258) 100%);
+    border: 0.0648vmin solid rgba(255, 255, 255, 0.5);
+    border-radius: 0.2778vmin;
+
+    padding: 0.463vmin;
+
+    display: flex;
+    flex-direction: column;
+    gap: 0.463vmin;
+    justify-content: center;
+}
+
+.mode-selector .append .aufnahmepflicht header {
+    font-family: 'Agency FB';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 1.6667vmin;
+    line-height: 2.037vmin;
+
+    color: #FFFFFF;
+}
+
+.mode-selector .append .aufnahmepflicht span {
+    font-family: 'Binaria';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 1.2037vmin;
+    line-height: 1.2037vmin;
+
+    color: rgba(255, 255, 255, 0.3);
+}

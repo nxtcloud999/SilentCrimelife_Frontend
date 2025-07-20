@@ -1,0 +1,171 @@
+.body-hud {
+    position: absolute;
+    right: 3vw;
+    top: 4.7222vh;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 1vh;
+}
+
+.text-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.boxes-container {
+    display: flex;
+    flex-direction: row;
+    gap: 0.8333vw;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.silent-crimelife {
+    position: relative;
+    width: auto;
+    height: auto;
+
+    font-family: 'Agency FB';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 1.9271vw;
+    line-height: 2.2917vw;
+    display: flex;
+    align-items: center;
+    text-align: right;
+    letter-spacing: -0.01em;
+    white-space: nowrap;
+
+    color: #00AAFF;
+    z-index: 10;
+}
+
+.silent-crimelife-blur {
+    position: absolute;
+    width: auto;
+    height: auto;
+    top: 0;
+    right: 0;
+
+    font-family: 'Agency FB';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 1.9271vw;
+    line-height: 2.2917vw;
+    display: flex;
+    align-items: center;
+    text-align: right;
+    letter-spacing: -0.01em;
+    white-space: nowrap;
+
+    color: #00AAFF;
+    filter: blur(1vmin);
+    z-index: 9;
+}
+
+.deaths-box {
+    width: 3.0729vw;
+    height: 2.6563vw;
+    background: #000000;
+    opacity: 0.8;
+    border-radius: 0.4167vw;
+    z-index: 1;
+}
+
+.kills-box {
+    width: 3.0729vw;
+    height: 2.6563vw;
+    background: #000000;
+    opacity: 0.8;
+    border-radius: 0.4167vw;
+    z-index: 1;
+}
+
+.kd-box {
+    width: 3.0729vw;
+    height: 2.6563vw;
+    background: #000000;
+    opacity: 0.8;
+    border-radius: 0.4167vw;
+    z-index: 1;
+}
+
+.todeblau, .killsblau, .kdblau {
+    position: absolute;
+    width: 2.2917vw;
+    height: 0.9896vw;
+    background: #008CFF;
+    border-radius: 0.3125vw;
+    bottom: 0.2604vw;
+    left: 50%;
+    transform: translateX(-50%);
+    
+    font-family: '0Arame';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 0.7292vw;
+    line-height: 0.7292vw;
+    text-align: center;
+    color: #FFFFFF;
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.tode-svg {
+    position: absolute;
+    width: 0.8333vw;
+    height: 0.8854vw;
+    top: 0.2604vw;
+    left: 50%;
+    transform: translateX(-50%);
+    background: url(../img/bodyhud/tode.svg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    opacity: 1;
+}
+
+.kills-svg {
+    position: absolute;
+    width: 0.9375vw;
+    height: 0.9896vw;
+    top: 0.2604vw;
+    left: 50%;
+    transform: translateX(-50%);
+    background: url(../img/bodyhud/kills.svg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    opacity: 1;
+}
+
+.kd-svg {
+    position: absolute;
+    width: 0.9375vw;
+    height: 0.8333vw;
+    top: 0.2604vw;
+    left: 50%;
+    transform: translateX(-50%);
+    background: url(../img/bodyhud/kd.svg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    opacity: 1;
+}
+
+.deaths-box, .kills-box, .kd-box {
+    position: relative;
+}
+
+.silent-text {
+    color: #00AAFF;
+    margin-right: 0.3em;
+}
+
+.crimelife-text {
+    color: #FFFFFF;
+}

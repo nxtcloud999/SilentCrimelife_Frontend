@@ -1,0 +1,135 @@
+.gwhud {
+    position: fixed;
+    top: 2vh;
+    left: 50%;
+    height: max-content;
+    width: max-content;
+    transform: translate(-50%);
+    display: var(--debug);
+}
+
+.gwhudbox {
+    height: 7vh;
+    width: 50vh;
+    background: #131313;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'SF';
+    gap: 1vh;
+    clip-path: polygon(0 0, 100% 0%, 90% 100%, 10% 100%);
+    border: 0.2vh solid #13acf8;
+}
+
+.gwtimer {
+    width: 18%;
+    margin: 1%;
+    font-size: 3.5vh;
+    color: rgb(255, 255, 255);
+    font-family: 'Akrobat-Bold';
+}
+
+.frakinner1 {
+    text-align: end;
+}
+
+.frakinner1, .frakinner2 {
+    width: 40%;
+    overflow: visible;
+}
+
+.gwlogo {
+    height: 75%;
+}
+
+.frakinner1 h3, .frakinner2 h3 {
+    font-size: 2.2vh;
+    font-family: 'Akrobat-Bold';
+    font-weight: 900;
+    background-clip: text;
+    color: rgb(182, 182, 182);
+}
+
+.frakinner1 h1, .frakinner2 h1 {
+    font-size: 2.4vh;
+    color: rgb(9,172,248);
+    font-family: 'Akrobat-Light';
+}
+
+.angreifen {
+    position: fixed;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left: 50%;
+    height: 45vh;
+    width: 40vh;
+    padding: 1vh;
+    display: var(--debug);
+    background: #131313;
+}
+
+.angreifenbox {
+    height: 87%;
+    width: 100%;
+    background: linear-gradient(0deg, rgba(255, 255, 255, 0) 0%, rgba(0, 128, 255, 0.094) 100%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: rgb(255, 255, 255);
+    font-family: 'SF';
+}
+
+.angreifenbox img {
+    height: 50%;
+    margin-top: 1vh;
+    margin-bottom: 2vh;
+}
+
+.angreifenbox h1 {
+    font-size: 5vh;
+    font-family: 'Akrobat-Bold';
+    color: rgb(255, 255, 255);
+    letter-spacing: 0.2vh;
+}
+
+.angreifenbox h3, .angreifenbox h2 {
+    margin-top: -1vh;
+    font-size: 3vh;
+    margin-left: -0.5vh;
+    font-family: 'Akrobat-Light';
+    color: rgb(203, 203, 203);
+}
+
+.angreifenflex {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1vh;
+    width: 100%;
+    margin-top: 1vh;
+}
+
+.angreifenflex button {
+    height: 4vh;
+    width: 45%;
+    font-family: 'Akrobat-Bold';
+    font-size: 2vh;
+    color: white;
+}
+
+.gwangreifen {
+    border: none;
+    outline: none;
+    background-color: #13acf8;
+}
+
+.gwabbrechen {
+    background-color: #d24747;
+    border: 0.1vh solid rgb(212, 36, 36);
+}
+
+.angreifenflex button:hover {
+    transform: scale(102%);
+    transition: 200ms;
+}

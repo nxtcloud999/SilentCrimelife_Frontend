@@ -1,0 +1,134 @@
+@import url('https://fonts.cdnfonts.com/css/akrobat?styles=16717,28193,28192,28194,28196,28195,28197');
+:root {
+    --clr-white: rgba(255, 255, 255, 1);
+    --clr-black: rgba(0, 0, 0, 1);
+    --clr-gray: #00c3ff; /* Mittelgrau */
+    --clr-darkgray: #22588b; /* Dunkles Grau */
+    --ff-akrobat: 'Akrobat', sans-serif;
+}
+*,
+*::before,
+*::after {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+#menu_dialog {
+    font-family: var(--ff-akrobat);
+    font-size: 1.5vh;
+    font-weight: 500;
+    color: var(--clr-white);
+}
+/* background container */
+.main__dialog_bg-container {
+    position: absolute;
+    top: 0vh;
+    left: 0vh;
+    width: 100vw;
+    height: 100vh;
+    z-index: -1;
+    background: radial-gradient(50% 50% at 50% 50%, rgba(0, 0, 0, 0.69) 0%, rgba(0, 0, 0, 0.75) 100%);
+}
+.main__dialog_container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(.8);
+    width: 40vh;
+    height: 24vh;
+    background: url(../img/Blur.svg);
+    background-color: #000;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    border-radius: 2.5vh;
+    padding: 2.5vh;
+}
+.main_dialog_header {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.main__dialog_top-header {
+    font-size: 2.5vh;
+    font-weight: 900;
+    text-transform: uppercase;
+    font-style: normal;
+    font-weight: bold;
+    background: linear-gradient(90deg, #404040 0%, #808080 100%); /* Grauer Gradient */
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-fill-color: transparent;
+    text-shadow: 0px .4vh 5.4vh rgba(128, 128, 128, 0.55); /* Grauer Schatten */
+}
+.main__dialog_top-secondary-header {
+    font-size: 2vh;
+    text-transform: uppercase;
+    font-weight: 600;
+    color: var(--clr-white);
+    margin-top: -.5vh;
+}
+.main__dialog_content-container {
+    width: 100%;
+    margin-top: 1.5vh;
+}
+.main__dialog_content-input-container input {
+    width: 100%;
+    background: rgba(255, 255, 255, 0.04);
+    border: .2vh solid rgba(255, 255, 255, .1);
+    outline: none;
+    font-family: var(--ff-akrobat);
+    border-radius: 1vh;
+    padding: 1.5vh;
+    text-align: center;
+    text-transform: uppercase;
+    color: rgba(255, 255, 255, 0.25); /* Halbtransparentes WeiÃŸ */
+    font-weight: 500;
+    font-size: 1.75vh;
+}
+.main__dialog_content-input-container input::placeholder {
+    color: rgba(255, 255, 255, 0.25); /* Halbtransparentes WeiÃŸ */
+}
+.main__dialog_content-button-grid {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    margin-top: 2.5vh;
+    gap: 1vh;
+}
+.main__dialog_content-button-agree {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(90deg, rgba(0, 136, 255, 0.315) 0%, #007bff 100%); /* Grauer Gradient */
+    padding: 1vh;
+    font-size: 1.75vh;
+    border-radius: 1vh;
+    transition: .2s ease-in;
+    cursor: pointer;
+    color: var(--clr-white);
+}
+.main__dialog_content-button-agree:hover {
+    box-shadow: 0vh 0vh 1.7vh #007bff; /* Dunklerer Grauschatten */
+}
+.main__dialog_content-button-decline {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(90deg, rgba(255, 0, 0, 0.3) 00%, #ff0000 100%); /* Hellgrauer Gradient */
+    padding: 1vh;
+    font-size: 1.75vh;
+    border-radius: 1vh;
+    border: .3vh solid #ff0000; /* Hellgraue Border */
+    cursor: pointer;
+    transition: .2s ease-in;
+    color: var(--clr-white);
+}
+.main__dialog_content-button-decline:hover {
+    box-shadow: 0vh 0vh 1.7vh #ff0000; /* Hellgrauer Schatten */
+}

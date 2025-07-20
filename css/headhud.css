@@ -1,0 +1,431 @@
+
+@font-face {
+    font-family: 'Arame';
+    src: url('../font/Arame-Bold.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Kdam Thmor Pro';
+    src: url('../font/KdamThmorPro-Regular.ttf') format('truetype');
+}
+
+
+@font-face {
+    font-family: 'Binaria';
+    src: url('../font/Binaria-Bold.ttf') format('truetype');
+}
+
+body {
+    font-family: 'Kdam Thmor Pro', sans-serif;
+    overflow: hidden;
+    width: 100vw;
+    height: 100vh;
+    /* background: black; */
+}
+
+.headshot-hud {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    pointer-events: none;
+}
+
+.obenrecjts {
+    position: absolute;
+    right: 2vw;
+    top: 1.45vw;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 0.5208vw;
+    z-index: 100;
+}
+
+.titel {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    margin-bottom: 0.1302vw;
+    margin-right: -0.3906vw;
+}
+
+.titeltext {
+    position: relative;
+    font-family: 'Arame', 'Kdam Thmor Pro', sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 1.6704vw;
+    line-height: 1.5104vw;
+    display: flex;
+    align-items: center;
+    text-align: right;
+    letter-spacing: -0.01em;
+    white-space: nowrap;
+    z-index: 10;
+}
+
+.blau {
+    color: #00AAFF;
+}
+
+.weiss {
+    color: #FFFFFF;
+    margin-left: 0.2604vw;
+}
+
+.titelblur {
+    position: absolute;
+    width: auto;
+    height: auto;
+    top: 0;
+    right: 0;
+    font-family: 'Arame', 'Kdam Thmor Pro', sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 1.6704vw;
+    line-height: 1.5104vw;
+    display: flex;
+    align-items: center;
+    text-align: right;
+    letter-spacing: -0.01em;
+    white-space: nowrap;
+    filter: blur(0.0521vw);
+    z-index: 9;
+}
+
+.stats {
+    display: flex;
+    flex-direction: row;
+    gap: 0.5208vw;
+    align-items: center;
+    justify-content: flex-end;
+    margin-bottom: 0.5208vw;
+}
+
+.stat {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 0.2604vw;
+}
+
+.wert {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.text {
+    position: relative;
+    width: auto;
+    height: auto;
+    font-family: 'Kdam Thmor Pro', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 0.7292vw;
+    line-height: 1.1458vw;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    white-space: nowrap;
+    color: #FFFFFF;
+    text-shadow: 0px 0.0521vw 0.0521vw rgba(0, 0, 0, 0.63);
+    z-index: 10;
+}
+
+.blur {
+    position: absolute;
+    width: auto;
+    height: auto;
+    top: 0;
+    left: 0;
+    font-family: 'Kdam Thmor Pro', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 0.7292vw;
+    line-height: 1.1458vw;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    white-space: nowrap;
+    color: rgba(255, 255, 255, 0.5);
+    filter: blur(0.2604vw);
+    z-index: 9;
+}
+
+.icon {
+    width: 0.8333vw;
+    height: 0.8333vw;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    opacity: 0.5;
+}
+
+.hashtag {
+    background-image: url('../img/headhud/id.svg');
+}
+
+.gruppe {
+    width: 0.9375vw;
+    height: 0.9375vw;
+    background-image: url('../img/headhud/spieler.svg');
+}
+
+.signal {
+    display: flex;
+    flex-direction: row;
+    gap: 0.2604vw;
+    align-items: center;
+}
+
+.radio {
+    width: 0.8333vw;
+    height: 0.8333vw;
+    background-image: url('../img/headhud/radio.svg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    opacity: 0.8;
+    margin-right: -0.10vw;
+}
+
+.mic {
+    width: 1.0417vw;
+    height: 1.0417vw;
+    background-image: url('../img/headhud/mic.svg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    opacity: 0.8;
+    margin-right: -0.04vw;
+}
+
+.punkt {
+    width: 0.4688vw;
+    height: 0.4688vw;
+    background: rgba(255, 255, 255, 0.6);
+    border-radius: 50%;
+    transition: all 0.3s ease;
+}
+
+.punkt.active {
+    background: #00AAFF;
+    box-shadow: 0px 0px 0.5208vw rgba(0, 170, 255, 0.5);
+}
+
+.linie {
+    position: absolute;
+    background: #FFFFFF;
+    opacity: 0.5;
+}
+
+.line1 {
+    width: 0.7292vw;
+    height: 0.7292vw;
+    top: -1.0417vw;
+    right: 0.7292vw;
+}
+
+.line2 {
+    width: 0.5208vw;
+    height: 0.8854vw;
+    top: -1.1458vw;
+    right: 0.2604vw;
+}
+
+.line3 {
+    width: 0.3646vw;
+    height: 0.5208vw;
+    bottom: -0.7813vw;
+    right: 0.2604vw;
+}
+
+.datum {
+    position: absolute;
+    width: 3.2813vw;
+    height: 1.6667vw;
+    left: 3.9583vw;
+    top: 2.2917vw;
+    font-family: 'Binaria', 'Kdam Thmor Pro', sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 0.7813vw;
+    line-height: 0.8854vw;
+    text-shadow: 0px 0.0521vw 0.0521vw rgba(0, 0, 0, 0.63);
+    z-index: 10;
+}
+
+.datumteil {
+    color: #808080;
+    margin-right: 0.2604vw;
+}
+
+.zeitteil {
+    color: #FFFFFF;
+}
+
+.datumblur {
+    position: absolute;
+    width: 3.2813vw;
+    height: 1.6667vw;
+    left: 3.9583vw;
+    top: 2.2917vw;
+    font-family: 'Binaria', 'Kdam Thmor Pro', sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 0.7813vw;
+    line-height: 0.8854vw;
+    opacity: 0.5;
+    filter: blur(0.0260vw);
+    z-index: 9;
+}
+
+.zeiticon {
+    position: absolute;
+    width: 1.1979vw;
+    height: 1.1979vw;
+    left: 2.1875vw;
+    top: 2.5521vw;
+    background-image: url('../img/headhud/zeit.svg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    opacity: 0.8;
+}
+
+.kills-text {
+    position: absolute;
+    width: 1.6667vw;
+    height: 0.6771vw;
+    left: 3.7500vw;
+    bottom: 11.5104vw;
+    font-family: 'Binaria', 'Kdam Thmor Pro', sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 0.7813vw;
+    line-height: 0.7813vw;
+    color: #FFFFFF;
+    text-shadow: 0px 0.0521vw 0.0521vw rgba(0, 0, 0, 0.63);
+    z-index: 10;
+}
+
+.kills-blur {
+    position: absolute;
+    width: 1.6667vw;
+    height: 0.6771vw;
+    left: 3.7500vw;
+    bottom: 11.5104vw;
+    font-family: 'Binaria', 'Kdam Thmor Pro', sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 0.7813vw;
+    line-height: 0.7813vw;
+    color: rgba(255, 255, 255, 0.5);
+    filter: blur(0.1042vw);
+    z-index: 9;
+}
+
+.kills-icon {
+    position: absolute;
+    width: 1.0417vw;
+    height: 1.0417vw;
+    left: 2.4479vw;
+    bottom: 11.4063vw;
+    background-image: url('../img/headhud/kills.svg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    opacity: 0.9;
+}
+
+.tode-text {
+    position: absolute;
+    width: 1.6667vw;
+    height: 0.6771vw;
+    left: 8.0938vw;
+    bottom: 11.5104vw;
+    font-family: 'Binaria', 'Kdam Thmor Pro', sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 0.7813vw;
+    line-height: 0.7813vw;
+    color: #FFFFFF;
+    text-shadow: 0px 0.0521vw 0.0521vw rgba(0, 0, 0, 0.63);
+    z-index: 10;
+}
+
+.tode-blur {
+    position: absolute;
+    width: 1.6667vw;
+    height: 0.6771vw;
+    left: 8.0938vw;
+    bottom: 11.5104vw;
+    font-family: 'Binaria', 'Kdam Thmor Pro', sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 0.7813vw;
+    line-height: 0.7813vw;
+    color: rgba(255, 255, 255, 0.5);
+    filter: blur(0.1042vw);
+    z-index: 9;
+}
+
+.tode-icon {
+    position: absolute;
+    width: 1.0417vw;
+    height: 1.0417vw;
+    left: 6.7917vw;
+    bottom: 11.4063vw;
+    background-image: url('../img/headhud/tode.svg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    opacity: 0.9;
+}
+
+.punkte-text {
+    position: absolute;
+    width: 1.6667vw;
+    height: 0.6771vw;
+    left: 12.0729vw;
+    bottom: 11.5104vw;
+    font-family: 'Binaria', 'Kdam Thmor Pro', sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 0.7813vw;
+    line-height: 0.7813vw;
+    color: #FFFFFF;
+    text-shadow: 0px 0.0521vw 0.0521vw rgba(0, 0, 0, 0.63);
+    z-index: 10;
+}
+
+.punkte-blur {
+    position: absolute;
+    width: 1.6667vw;
+    height: 0.6771vw;
+    left: 12.0729vw;
+    bottom: 11.5104vw;
+    font-family: 'Binaria', 'Kdam Thmor Pro', sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 0.7813vw;
+    line-height: 0.7813vw;
+    color: rgba(255, 255, 255, 0.5);
+    filter: blur(0.1042vw);
+    z-index: 9;
+}
+
+.punkte-icon {
+    position: absolute;
+    width: 1.0417vw;
+    height: 1.0417vw;
+    left: 10.6667vw;
+    bottom: 11.4063vw;
+    background-image: url('../img/headhud/stats.svg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    opacity: 0.9;
+}
